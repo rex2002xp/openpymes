@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: Pymes2542
+      POSTGRES_DB: pymes
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports: 
+      - 5432:5432
+    volumes: 
+      - ./volumen/data:/var/lib/postgresql/data 
