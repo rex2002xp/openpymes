@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-tab2',
-  templateUrl: 'tab2.html',
+  selector: 'page-contact',
+  templateUrl: 'contact.html',
 })
-export class Tab2Page {
+export class ContactPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Tab2Page');
+    console.log('ionViewDidLoad ContactPage');
   }
 
 }
