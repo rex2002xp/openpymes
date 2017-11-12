@@ -1,32 +1,31 @@
 {
-  "name": "openpymes-db",
+  "name": "openpymes-api",
   "version": "1.0.0",
   "private": true,
-  "description": "Plataforma PyMES - DB Module",
+  "description": "Plataforma PyMES - Api Module",
   "main": "index.js",
   "scripts": {
-    "setup": "DEBUG=openpymes:* DB_SETUP=true node setup.js",
+    "start": "NODE_ENV=production node server.js",
+    "start-dev": "DEBUG=openpymes:* nodemon server.js",
     "lint": "standard"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/rex2002xp/openpymes.git"
   },
-  "author": "Victor Hugo Cornejo <rex2002xp@gmail.com>",
+  "author": "Victor Hugo Cornejo Calderon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rex2002xp/openpymes/issues"
   },
   "homepage": "https://github.com/rex2002xp/openpymes#readme",
   "devDependencies": {
+    "nodemon": "^1.12.1",
     "standard": "^10.0.3"
   },
   "dependencies": {
     "chalk": "^2.3.0",
     "debug": "^3.1.0",
-    "inquirer": "^3.3.0",
-    "pg": "^7.4.0",
-    "pg-hstore": "^2.3.2",
-    "sequelize": "^4.22.6"
+    "express": "^4.16.2"
   }
 }
