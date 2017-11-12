@@ -9,6 +9,7 @@ const setupDatabase = require('./lib/db')
 const setupContactModel = require('./models/contact')
 const setupContactPhoneModel = require('./models/contact-phone')
 const setupContactEmailModel = require('./models/contact-email')
+const setupContact = require('./lib/contact')
 
 module.exports = async function (config) {
   const sequelize = setupDatabase(config)
@@ -27,9 +28,9 @@ module.exports = async function (config) {
     await sequelize.sync({ force: true })
   }
 
-  const Contact = {}
+  const Contact = setupContact(ContactModel, ContactEmail, ContactPhone)
 
   return {
-    Contact: Contact
+    Contact
   }
 }
